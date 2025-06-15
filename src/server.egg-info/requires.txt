@@ -1,0 +1,5 @@
+fastapi[standard]==0.115.12
+boto3==1.38.36
+
+[dev]
+pytest>=6.0
