@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools >= 80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "server"
+version = "1.0.0"
+description = "FastAPI server"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["fastapi[standard]"]
+optional-dependencies = {dev = [
+    "pytest>=6.0"
+    ]}
+urls = {project = "https://github.com/Indiwara65/aws_ecs.git"}
