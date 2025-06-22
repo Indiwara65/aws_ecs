@@ -3,37 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Login Page | CodingNepal</title>
+    <title>MarineIQ Login Page</title>
     <link rel="stylesheet" href="{{url_for('static',path='style/login.css')}}">
+    <link rel="icon" href="/static/images/favicon.png" type="image/png">
 </head>
 <body>
     <nav>
-        <a href="#"><img src="images/logo.svg" alt="logo"></a>
+        <a href="#"><img src="{{url_for('static',path='images/boat.gif')}}" alt="logo"></a>
     </nav>
     <div class="form-wrapper">
         <h2>Log In</h2>
-        <form action="#">
+        <form action="user/login" method="post" target="_self">
             <div class="form-control">
-                <input type="text" required>
+                <input type="text" required placeholder="username" name="username">
                 <label>Username</label>
             </div>
             <div class="form-control">
-                <input type="password" required>
+                <input type="password" required placeholder="password" name="password">
                 <label>Password</label>
             </div>
             <button type="submit">Log In</button>
             <div class="form-help"> 
                 <div class="remember-me">
-                    <input type="checkbox" id="remember-me">
-                    <label for="remember-me">Remember me</label>
+                    <input type="checkbox" id="long_live" name="long_live" placeholder="long_live">
+                    <label for="long_live">Long live</label>
                 </div>
                 <a href="#">Need help?</a>
             </div>
         </form>
-        <p>New to Netflix? <a href="#">Sign up now</a></p>
+        <p>New to MarineIQ?
         <small>
-            This page is protected by Google reCAPTCHA to ensure you're not a bot. 
-            <a href="#">Learn more.</a>
+            Contact your admin to create a new login / role.
         </small>
     </div>
 </body>
