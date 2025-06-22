@@ -1,6 +1,6 @@
 #External Dependencies
 from fastapi import FastAPI, Cookie, Request
-from fastapi.responses import JSONResponse, HTMLResponse
+from fastapi.responses import JSONResponse, HTMLResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
@@ -29,11 +29,14 @@ async def health():
 @app.get("/", response_class=HTMLResponse)
 async def home(request:Request):
     session = None
+    cookies = request.cookies
+    print(type(cookies), cookies)
     #not logged in
     if session is None:
         return templates.TemplateResponse(request=request, name="login.html")
     #check sessionId in DB
     #home page
+    return RedirectResponse()
 
 
 if __name__=="__main__":

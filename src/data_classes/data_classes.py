@@ -15,8 +15,9 @@ class User(BaseModel):
     role      : Role
 
 class Login(BaseModel):
-    username : str
-    password : str
+    username  : str
+    password  : str
+    long_live : str = Field(default="off")
 
 class Session(BaseModel):
     sessionID : int

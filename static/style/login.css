@@ -23,7 +23,7 @@ nav a img {
     padding: 70px;
     width: 450px;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, .75);
+    background: rgba(44, 44, 44, 0.75);
 }
 .form-wrapper h2 {
     color: #fff;
@@ -70,7 +70,7 @@ form button {
     width: 100%;
     padding: 16px 0;
     font-size: 1rem;
-    background: #e50914;
+    background: #e04c53;
     color: #fff;
     font-weight: 500;
     border-radius: 4px;
